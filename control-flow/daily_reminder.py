@@ -1,29 +1,32 @@
 # daily_reminder.py
 
 def main():
-    # Prompt user for task details
-    task = input("Enter the task description: ")
-    time_bound = input("Is the task time-bound? (yes or no): ").lower()
-    priority = input("Enter the priority level (high, medium, low): ")
-    
+    # Prompt for a single task
+    task = input("Enter your task: ")
+    priority = input("Priority (high/medium/low): ").lower()
+    time_bound = input("Is it time-bound? (yes/no): ").lower()
+
     # Process the task based on priority and time sensitivity
-    print("Reminder:")
     match priority:
         case 'high':
-            print(f"{task} - Time Bound: {time_bound.capitalize()}, Priority: {priority.capitalize()}")
             if time_bound == 'yes':
-                print("This task requires immediate attention today!")
+                print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
+            else:
+                print(f"Reminder: '{task}' is a high priority task.")
         case 'medium':
-            print(f"{task} - Time Bound: {time_bound.capitalize()}, Priority: {priority.capitalize()}")
             if time_bound == 'yes':
-                print("This task requires attention soon.")
+                print(f"Reminder: '{task}' is a medium priority task that needs to be completed today.")
+            else:
+                print(f"Reminder: '{task}' is a medium priority task.")
         case 'low':
-            print(f"{task} - Time Bound: {time_bound.capitalize()}, Priority: {priority.capitalize()}")
             if time_bound == 'yes':
-                print("This task is time-bound but has lower priority.")
+                print(f"Reminder: '{task}' is a low priority task that should be completed today.")
+            else:
+                print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
         case _:
-            print("Invalid priority level entered.")
-    
+            print("Invalid priority level. Please enter high, medium, or low.")
+
 if __name__ == "__main__":
     main()
+
 
