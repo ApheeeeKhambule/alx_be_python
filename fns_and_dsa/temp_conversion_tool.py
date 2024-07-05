@@ -8,7 +8,6 @@ def check_global_variables():
     """
     Check if global variables are defined correctly.
     """
-    global FAHRENHEIT_TO_CELSIUS_FACTOR, CELSIUS_TO_FAHRENHEIT_FACTOR
     if FAHRENHEIT_TO_CELSIUS_FACTOR == 5 / 9:
         print("FAHRENHEIT_TO_CELSIUS_FACTOR is defined correctly.")
     else:
