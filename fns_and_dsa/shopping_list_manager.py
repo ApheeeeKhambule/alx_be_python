@@ -1,6 +1,6 @@
 # shopping_list_manager.py
 
-def display_menu():
+def display menu():
     print("\nShopping List Manager")
     print("1. Add item")
     print("2. Remove item")
