@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 # Part 1: Display the Current Date and Time
 def display_current_datetime():
     current_date = datetime.now()
-    formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
+    formatted_date = current_date.strftime("Enter the number of days to add to the current date:")
     print(f"Current Date and Time: {formatted_date}")
 
 # Part 2: Calculate a Future Date
